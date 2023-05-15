@@ -3,7 +3,7 @@
     <div v-if="pages.length">
     <div v-for="page in pages" :key="page.id" class="page">
     <h2>{{ page.title.rendered }} </h2>
-<div class="post-content">{{ page.content.rendered }}</div>
+<div class="post-content" v-html="page.content.rendered"></div>
     </div></div>
     <div v-else>
         <p>loading pages...</p>
